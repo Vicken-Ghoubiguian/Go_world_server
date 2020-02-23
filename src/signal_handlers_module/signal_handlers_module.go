@@ -18,7 +18,7 @@ func Setup_ctrl_c_handler() {
 
 		<-c
 
-		fmt.Println("Goodbye, we will miss you...\r")
+		fmt.Println("\rGoodbye, we will miss you...\r")
 
 		os.Exit(0)
 	}()

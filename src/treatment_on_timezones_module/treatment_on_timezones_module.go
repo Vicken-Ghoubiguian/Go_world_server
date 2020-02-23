@@ -1,10 +1,8 @@
 package treatment_on_timezones_module
 
 import (
-        //"fmt"
         "strings"
         "time"
-        //"net/http"
 )
 
 //Function to shaping the timezone to replace '&' by '/'
@@ -55,11 +53,19 @@ func Master_function(bruts_timezones_array []string) string {
 
         for incrementer := range timezones_array {
 
-                tz_loc, _ := time.LoadLocation(timezones_array[incrementer])
+                tz_loc, result_error := time.LoadLocation(timezones_array[incrementer])
 
-                tz_now := time.Now().In(tz_loc)
+		if result_error == nil {
 
-                master_string += timezones_array[incrementer] + " : " + tz_now.String() + "\n"
+			tz_now := time.Now().In(tz_loc)
+
+			master_string += timezones_array[incrementer] + " : " + tz_now.String() + "\n"
+
+		} else {
+
+			master_string += "Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...\n"
+
+		}
 
         }
 
