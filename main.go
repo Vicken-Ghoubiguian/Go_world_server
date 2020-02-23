@@ -5,9 +5,12 @@ import (
 	"strings"
 	"net/http"
 	"treatment_on_timezones_module"
+	"signal_handlers_module"
 )
 
 func main() {
+
+	signal_handlers_module.Setup_ctrl_c_handler()
 
 	http.HandleFunc("/", handlerFunction)
 
