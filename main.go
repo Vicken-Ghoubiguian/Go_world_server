@@ -1,12 +1,21 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"strings"
+	"html/template"
 	"net/http"
 	"treatment_on_timezones_module"
 	"signal_handlers_module"
 )
+
+type Page struct {
+
+	Title string
+	Main_section_title string
+	Text string
+
+}
 
 func main() {
 
@@ -14,7 +23,7 @@ func main() {
 
 	http.HandleFunc("/", handlerFunction)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 
 }
 
@@ -24,6 +33,15 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	master_string := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
-	fmt.Fprintf(w, master_string)
+	p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_string}
 
+	t := template.New("New tmpl")
+
+	t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+
+	err := t.ExecuteTemplate(w, "maintmpl", p)
+
+	if err != nil {
+        	log.Fatalf("Template execution: %s", err)
+    	}
 }

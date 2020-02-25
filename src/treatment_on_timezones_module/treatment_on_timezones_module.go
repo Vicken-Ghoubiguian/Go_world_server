@@ -59,11 +59,11 @@ func Master_function(bruts_timezones_array []string) string {
 
 			tz_now := time.Now().In(tz_loc)
 
-			master_string += timezones_array[incrementer] + " : " + tz_now.String() + "\n"
+			master_string += "<p>" + timezones_array[incrementer] + " : " + tz_now.String() + "</p>"
 
 		} else {
 
-			master_string += "Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...\n"
+			master_string += "<p>Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...</p>"
 
 		}
 
