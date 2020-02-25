@@ -13,7 +13,7 @@ type Page struct {
 
 	Title string
 	Main_section_title string
-	Text string
+	Tz_array []string
 
 }
 
@@ -23,7 +23,7 @@ func main() {
 
 	http.HandleFunc("/", handlerFunction)
 
-	http.ListenAndServe(":8081", nil)
+	http.ListenAndServe(":8080", nil)
 
 }
 
@@ -31,9 +31,9 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	bruts_timezones_array := strings.Split(r.URL.Path[1:], "/")
 
-	master_string := treatment_on_timezones_module.Master_function(bruts_timezones_array)
+	master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
-	p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_string}
+	p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}
 
 	t := template.New("New tmpl")
 

@@ -44,10 +44,10 @@ func tz_extraction_function(bruts_timezones_array []string) []string {
 
 }
 
-//Function to pilot the treatment of timezones passed in argument to return global string with all datas
-func Master_function(bruts_timezones_array []string) string {
+//Function to pilot the treatment of timezones passed in argument to return a global array with all datas
+func Master_function(bruts_timezones_array []string) []string {
 
-        master_string := "\n"
+	var master_array []string
 
         timezones_array := tz_extraction_function(bruts_timezones_array)
 
@@ -59,15 +59,16 @@ func Master_function(bruts_timezones_array []string) string {
 
 			tz_now := time.Now().In(tz_loc)
 
-			master_string += "<p>" + timezones_array[incrementer] + " : " + tz_now.String() + "</p>"
+			master_array = append(master_array, timezones_array[incrementer] + " : " + tz_now.String())
 
 		} else {
 
-			master_string += "<p>Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...</p>"
+			master_array = append(master_array, "Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...")
 
 		}
 
         }
 
-        return master_string
+        //return master_array
+	return master_array
 }
