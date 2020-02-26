@@ -70,6 +70,5 @@ func Master_function(bruts_timezones_array []string) []string {
 
         }
 
-        //return master_array
 	return master_array
 }
