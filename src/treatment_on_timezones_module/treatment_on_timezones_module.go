@@ -2,6 +2,7 @@ package treatment_on_timezones_module
 
 import (
         "strings"
+	"treatment_on_time_module"
         "time"
 )
 
@@ -59,7 +60,7 @@ func Master_function(bruts_timezones_array []string) []string {
 
 			tz_now := time.Now().In(tz_loc)
 
-			master_array = append(master_array, timezones_array[incrementer] + " : " + tz_now.String())
+			master_array = append(master_array, timezones_array[incrementer] + " : " + treatment_on_time_module.Time_shaping_function(tz_now))
 
 		} else {
 
