@@ -21,6 +21,8 @@ func main() {
 
 	signal_handlers_module.Setup_ctrl_c_handler()
 
+	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
+
 	http.HandleFunc("/", handlerFunction)
 
 	http.ListenAndServe(":8080", nil)
@@ -28,10 +30,6 @@ func main() {
 }
 
 func handlerFunction(w http.ResponseWriter, r *http.Request) {
-
-  	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
-
-	//http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
 
 	bruts_timezones_array := strings.Split(r.URL.Path[1:], "/")
 
