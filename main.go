@@ -4,19 +4,11 @@ import (
 	"log"
 	"fmt"
 	"strings"
-	"html/template"
+	"template_displayer_module"
 	"net/http"
 	"treatment_on_timezones_module"
 	"signal_handlers_module"
 )
-
-type Page struct {
-
-	Title string
-	Main_section_title string
-	Tz_array []string
-
-}
 
 func main() {
 
@@ -46,13 +38,7 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 		master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
-		p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}
-
-		t := template.New("New tmpl")
-
-		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
-
-		err := t.ExecuteTemplate(w, "maintmpl", p)
+		err := template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}, w)
 
 		if err != nil {
 
