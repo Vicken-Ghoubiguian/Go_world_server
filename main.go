@@ -29,6 +29,8 @@ func main() {
 
 func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
+  	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
+
 	bruts_timezones_array := strings.Split(r.URL.Path[1:], "/")
 
 	master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
