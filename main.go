@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"fmt"
 	"strings"
 	"html/template"
 	"net/http"
@@ -33,17 +34,34 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	bruts_timezones_array := strings.Split(r.URL.Path[1:], "/")
 
-	master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
+	welcome_indicator := false
 
-	p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}
+	if r.URL.Path != "/" {
 
-	t := template.New("New tmpl")
+		welcome_indicator = true
 
-	t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+	}
 
-	err := t.ExecuteTemplate(w, "maintmpl", p)
+	if welcome_indicator {
 
-	if err != nil {
-        	log.Fatalf("Template execution: %s", err)
-    	}
+		master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
+
+		p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}
+
+		t := template.New("New tmpl")
+
+		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+
+		err := t.ExecuteTemplate(w, "maintmpl", p)
+
+		if err != nil {
+
+        		log.Fatalf("Template execution: %s", err)
+    		}
+
+	} else {
+
+		fmt.Fprintf(w, "Aucune timezone à afficher !!!!")
+
+	}
 }
