@@ -14,6 +14,8 @@ func main() {
 
 	signal_handlers_module.Setup_ctrl_c_handler()
 
+	signal_handlers_module.Setup_ctrl_z_handler()
+
 	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
 
 	http.HandleFunc("/", handlerFunction)

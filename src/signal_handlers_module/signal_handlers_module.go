@@ -23,3 +23,19 @@ func Setup_ctrl_c_handler() {
 		os.Exit(0)
 	}()
 }
+
+//Function to handle Ctrl+Z signal
+func Setup_ctrl_z_handler() {
+
+	z := make(chan os.Signal, 20)
+
+	signal.Notify(z, os.Interrupt, syscall.SIGTSTP)
+
+	go func() {
+
+		<-z
+
+		fmt.Println("\rPressed Ctrl+z...\r")
+
+	}()
+}
