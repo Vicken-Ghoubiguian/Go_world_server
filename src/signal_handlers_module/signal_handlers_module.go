@@ -19,7 +19,7 @@ func Setup_ctrl_c_handler() {
 
 		<-c
 
-		fmt.Println("\rGoodbye, we will miss you...\r")
+		fmt.Println("\rGoodbye, we will miss you (" + strconv.Itoa(os.Getpid()) + ")...\r")
 
 		os.Exit(0)
 	}()
