@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/signal"
+	"strconv"
 	"syscall"
 )
 
@@ -35,7 +36,7 @@ func Setup_ctrl_z_handler() {
 
 		<-z
 
-		fmt.Println("\rPressed Ctrl+z...\r")
+		fmt.Println("\rPressed Ctrl+z, suspended process " + strconv.Itoa(os.Getpid()) + "...\r")
 
 	}()
 }
