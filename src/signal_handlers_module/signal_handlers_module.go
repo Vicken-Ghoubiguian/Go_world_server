@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"strconv"
 	"syscall"
+	"colors_in_terminal_module"
 )
 
 //Function to handle Ctrl+c signal
@@ -19,7 +20,7 @@ func Setup_ctrl_c_handler() {
 
 		<-c
 
-		fmt.Println("\rGoodbye, we will miss you (" + strconv.Itoa(os.Getpid()) + ")...\r")
+		fmt.Println(colors_in_terminal_module.Cyan + "\rGoodbye, we will miss you (" + strconv.Itoa(os.Getpid()) + ")...\r" + colors_in_terminal_module.Reset)
 
 		os.Exit(0)
 	}()
@@ -36,7 +37,7 @@ func Setup_ctrl_z_handler() {
 
 		<-z
 
-		fmt.Println("\rPressed Ctrl+z, suspended process " + strconv.Itoa(os.Getpid()) + "...\r")
+		fmt.Println(colors_in_terminal_module.Cyan + "\rPressed Ctrl+z, suspended process " + strconv.Itoa(os.Getpid()) + "...\r" + colors_in_terminal_module.Reset)
 
 	}()
 }
