@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"fmt"
 	"strings"
 	"template_displayer_module"
 	"net/http"
@@ -20,7 +19,7 @@ func main() {
 
 	http.HandleFunc("/", handlerFunction)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 
 }
 
@@ -49,7 +48,11 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	} else {
 
-		fmt.Fprintf(w, "Aucune timezone à afficher !!!!")
+		err := template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, w)
 
+		if err != nil {
+
+                        log.Fatalf("Template execution: %s", err)
+                }
 	}
 }
