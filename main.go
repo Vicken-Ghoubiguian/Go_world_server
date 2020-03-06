@@ -4,6 +4,8 @@ import (
 	"strings"
 	"template_displayer_module"
 	"net/http"
+	"logs_module"
+	"colors_in_terminal_module"
 	"treatment_on_timezones_module"
 	"signal_handlers_module"
 )
@@ -15,6 +17,8 @@ func main() {
 	signal_handlers_module.Setup_ctrl_z_handler()
 
 	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
+
+	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Connectez-vous à Go world server à l'adresse suivante: http://localhost:8080/...")
 
 	http.HandleFunc("/", handlerFunction)
 
