@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"strings"
 	"template_displayer_module"
 	"net/http"
@@ -39,20 +38,11 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 		master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
-		err := template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}, w)
-
-		if err != nil {
-
-        		log.Fatalf("Template execution: %s", err)
-    		}
+		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}, w)
 
 	} else {
 
-		err := template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, w)
+		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, w)
 
-		if err != nil {
-
-                        log.Fatalf("Template execution: %s", err)
-                }
 	}
 }

@@ -3,7 +3,7 @@ package template_displayer_module
 import (
 	"html/template"
 	"net/http"
-	//"builtin"
+	"log"
 )
 
 type Page struct {
@@ -14,9 +14,7 @@ type Page struct {
 
 }
 
-func Display_template_function(defined_page Page, w http.ResponseWriter) error {
-
-	//p := Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}
+func Display_template_function(defined_page Page, w http.ResponseWriter) {
 
 	t := template.New("New tmpl")
 
@@ -24,6 +22,8 @@ func Display_template_function(defined_page Page, w http.ResponseWriter) error {
 
 	err := t.ExecuteTemplate(w, "maintmpl", defined_page)
 
-	return err
+	if err != nil {
 
+		log.Fatalf("Template execution: %s", err)
+	}
 }
