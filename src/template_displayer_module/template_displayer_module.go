@@ -32,7 +32,14 @@ func Display_template_function(defined_page Page, w http.ResponseWriter) {
 
 	} else {
 
-		logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones...")
+		if len(defined_page.Tz_array) > 0 {
 
+			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones...")
+
+		} else {
+
+			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display welcome page...")
+
+		}
 	}
 }
