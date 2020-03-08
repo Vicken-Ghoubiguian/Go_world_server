@@ -16,7 +16,7 @@ type Page struct {
 
 }
 
-func Display_template_function(defined_page Page, w http.ResponseWriter) {
+func Display_template_function(defined_page Page, bruts_timezones_string string, w http.ResponseWriter) {
 
 	t := template.New("New tmpl")
 
@@ -36,7 +36,7 @@ func Display_template_function(defined_page Page, w http.ResponseWriter) {
 
 		if len(defined_page.Tz_array) > 0 {
 
-			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones...")
+			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones [" + bruts_timezones_string + "]...")
 
 			logs_module.Display_purple_line()
 

@@ -72,3 +72,24 @@ func Master_function(bruts_timezones_array []string) []string {
 
 	return master_array
 }
+
+//Function to display all timezones registered in URL
+func Display_as_string_function(bruts_timezones_array []string) string {
+
+	var bruts_timezones_string string
+
+	for incrementer := range bruts_timezones_array {
+
+		bruts_timezones_string = bruts_timezones_string + bruts_timezones_array[incrementer]
+
+		if incrementer != len(bruts_timezones_array) - 1 {
+
+			bruts_timezones_string = bruts_timezones_string + ", "
+
+		}
+
+	}
+
+	return bruts_timezones_string
+
+}

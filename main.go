@@ -44,11 +44,13 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 		master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
-		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}, w)
+		bruts_timezones_string := treatment_on_timezones_module.Display_as_string_function(bruts_timezones_array)
+
+		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", master_array}, bruts_timezones_string, w)
 
 	} else {
 
-		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, w)
+		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, "", w)
 
 	}
 }
