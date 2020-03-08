@@ -20,7 +20,7 @@ func Setup_ctrl_c_handler() {
 
 		<-c
 
-		fmt.Println(colors_in_terminal_module.Cyan + "\rGoodbye, we will miss you (" + strconv.Itoa(os.Getpid()) + ")...\r" + colors_in_terminal_module.Reset)
+		fmt.Println(colors_in_terminal_module.Cyan + "\rGoodbye, we will miss you (" + strconv.Itoa(os.Getpid()) + ")...\n" + colors_in_terminal_module.Reset)
 
 		os.Exit(0)
 	}()
@@ -37,7 +37,7 @@ func Setup_ctrl_z_handler() {
 
 		<-z
 
-		fmt.Println(colors_in_terminal_module.Cyan + "\rPressed Ctrl+z, suspended process " + strconv.Itoa(os.Getpid()) + "...\r" + colors_in_terminal_module.Reset)
+		fmt.Println(colors_in_terminal_module.Cyan + "\rPressed Ctrl+z, suspended process " + strconv.Itoa(os.Getpid()) + "...\n" + colors_in_terminal_module.Reset)
 
 	}()
 }
