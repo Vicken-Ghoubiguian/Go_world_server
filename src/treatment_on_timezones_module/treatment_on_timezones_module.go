@@ -78,13 +78,29 @@ func Display_as_string_function(bruts_timezones_array []string) string {
 
 	var bruts_timezones_string string
 
+	var limited_value int
+
+	if bruts_timezones_array[len(bruts_timezones_array) - 1] == "" {
+
+		limited_value = len(bruts_timezones_array) - 1
+
+	} else {
+
+		limited_value = len(bruts_timezones_array)
+
+	}
+
 	for incrementer := range bruts_timezones_array {
 
-		bruts_timezones_string = bruts_timezones_string + bruts_timezones_array[incrementer]
+		if incrementer < limited_value {
 
-		if incrementer != len(bruts_timezones_array) - 1 {
+			bruts_timezones_string = bruts_timezones_string + bruts_timezones_array[incrementer]
 
-			bruts_timezones_string = bruts_timezones_string + ", "
+			if incrementer != limited_value - 1 {
+
+				bruts_timezones_string = bruts_timezones_string + ", "
+
+			}
 
 		}
 
