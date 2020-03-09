@@ -45,6 +45,21 @@ func tz_extraction_function(bruts_timezones_array []string) []string {
 
 }
 
+//Function to determine the future limited value to treat array's elements in parameter
+func determination_of_limited_value_function(bruts_timezones_array []string) int {
+
+	if bruts_timezones_array[len(bruts_timezones_array) - 1] == "" {
+
+                return len(bruts_timezones_array) - 1
+
+        } else {
+
+                return len(bruts_timezones_array)
+
+        }
+
+}
+
 //Function to pilot the treatment of timezones passed in argument to return a global array with all datas
 func Master_function(bruts_timezones_array []string) []string {
 
@@ -78,17 +93,7 @@ func Display_as_string_function(bruts_timezones_array []string) string {
 
 	var bruts_timezones_string string
 
-	var limited_value int
-
-	if bruts_timezones_array[len(bruts_timezones_array) - 1] == "" {
-
-		limited_value = len(bruts_timezones_array) - 1
-
-	} else {
-
-		limited_value = len(bruts_timezones_array)
-
-	}
+	limited_value := determination_of_limited_value_function(bruts_timezones_array)
 
 	for incrementer := range bruts_timezones_array {
 
