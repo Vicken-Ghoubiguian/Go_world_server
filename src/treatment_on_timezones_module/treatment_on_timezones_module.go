@@ -67,19 +67,25 @@ func Master_function(bruts_timezones_array []string) []string {
 
         timezones_array := tz_extraction_function(bruts_timezones_array)
 
+	limited_value := determination_of_limited_value_function(bruts_timezones_array)
+
         for incrementer := range timezones_array {
 
-                tz_loc, result_error := time.LoadLocation(timezones_array[incrementer])
+		if incrementer < limited_value {
 
-		if result_error == nil {
+                	tz_loc, result_error := time.LoadLocation(timezones_array[incrementer])
 
-			tz_now := time.Now().In(tz_loc)
+			if result_error == nil {
 
-			master_array = append(master_array, timezones_array[incrementer] + " : " + treatment_on_time_module.Time_shaping_function(tz_now))
+				tz_now := time.Now().In(tz_loc)
 
-		} else {
+				master_array = append(master_array, timezones_array[incrementer] + " : " + treatment_on_time_module.Time_shaping_function(tz_now))
 
-			master_array = append(master_array, "Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...")
+			} else {
+
+				master_array = append(master_array, "Une erreur est survenue: la timezone " + timezones_array[incrementer] + " n'est pas valide...")
+
+			}
 
 		}
 
