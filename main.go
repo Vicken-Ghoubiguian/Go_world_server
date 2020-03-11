@@ -34,7 +34,7 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	welcome_indicator := false
 
-	if r.URL.Path != "/" {
+	if r.URL.Path != "/" || r.URL.Path != "" {
 
 		welcome_indicator = true
 
