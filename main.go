@@ -50,7 +50,7 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	} else {
 
-		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, "", w)
+		template_displayer_module.Display_template_function(template_displayer_module.Page{"Go world server", "Bienvenue sur Go world server, le serveur mondial qui déchire !!!!", []string{}}, "Yessi !!!!", w)
 
 	}
 }
