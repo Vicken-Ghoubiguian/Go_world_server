@@ -13,6 +13,7 @@ type Page struct {
         Title string
         Main_section_title string
         Tz_array []string
+	Welcome_indicator bool
 
 }
 
