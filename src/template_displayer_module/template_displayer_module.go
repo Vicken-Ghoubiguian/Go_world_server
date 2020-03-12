@@ -35,17 +35,25 @@ func Display_template_function(defined_page Page, bruts_timezones_string string,
 
 	} else {
 
-		if len(defined_page.Tz_array) > 0 {
+		if defined_page.Welcome_indicator {
 
-			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones [" + bruts_timezones_string + "]...")
+			/*logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones [" + bruts_timezones_string + "]...")
 
-			logs_module.Display_purple_line()
-
-		} else {
+			logs_module.Display_purple_line()*/
 
 			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display welcome page...")
 
-			logs_module.Display_purple_line()
+                        logs_module.Display_purple_line()
+
+		} else {
+
+			/*logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display welcome page...")
+
+			logs_module.Display_purple_line()*/
+
+			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones [" + bruts_timezones_string + "]...")
+
+                        logs_module.Display_purple_line()
 
 		}
 	}

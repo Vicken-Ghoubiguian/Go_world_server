@@ -34,13 +34,13 @@ func handlerFunction(w http.ResponseWriter, r *http.Request) {
 
 	welcome_indicator := false
 
-	if r.URL.Path != "/" || r.URL.Path != "" {
+	if r.URL.Path == "/" || r.URL.Path == "" {
 
 		welcome_indicator = true
 
 	}
 
-	if welcome_indicator {
+	if !welcome_indicator {
 
 		master_array := treatment_on_timezones_module.Master_function(bruts_timezones_array)
 
