@@ -105,7 +105,7 @@ func Display_as_string_function(bruts_timezones_array []string) string {
 
 		if incrementer < limited_value {
 
-			bruts_timezones_string = bruts_timezones_string + bruts_timezones_array[incrementer]
+			bruts_timezones_string = bruts_timezones_string + tz_shaping_function(bruts_timezones_array[incrementer])
 
 			if incrementer != limited_value - 1 {
 
