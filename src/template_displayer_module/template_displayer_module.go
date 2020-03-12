@@ -21,7 +21,15 @@ func Display_template_function(defined_page Page, bruts_timezones_string string,
 
 	t := template.New("New tmpl")
 
-	t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+	if defined_page.Welcome_indicator {
+
+		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/welcomebodytmpl.tmpl"))
+
+	} else {
+
+		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+
+	}
 
 	err := t.ExecuteTemplate(w, "maintmpl", defined_page)
 
