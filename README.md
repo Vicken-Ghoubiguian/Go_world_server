@@ -41,6 +41,6 @@ Félicitations une fois cela fait, vous pouvez maintenant lancer le projet à l'
 ```bash
 go run main.go
 ```
-ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL ci-contre: ```http://localhost:8080/```.
+ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost:8080/">suivant</a>.
 
 ## Installer Go_world_server en version de production dans un container Docker
