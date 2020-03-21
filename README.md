@@ -42,6 +42,4 @@ Félicitations une fois cela fait, vous pouvez maintenant lancer le projet à l'
 go run main.go
 ```
 
-## Installer Go_world_server en version de production sur un container Docker
-
-## Générer le container Docker d'une version de Go_world_server
+## Installer Go_world_server en version de production dans un container Docker
