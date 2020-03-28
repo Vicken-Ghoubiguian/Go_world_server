@@ -49,7 +49,71 @@ Il existe 2 procédés pour installer Go_world_server avec Docker: **à l'aide d
 
 # Installer Go_world_server en production à l'aide du fichier Dockerfile
 
+Un fichier nommé `Dockerfile` existe à la racine du projet.
 
+Ce fichier permet à Docker de créer l'image de l'application web et de faire fonctionner ce dernier dans un container Docker.
 
-# Installer Go_world_server en production à l'aide de l'image docker pullé de Go_world_server
+Tout d'abord, placez-vous dans le projet à l'aide de la commande suivante:
 
+```bash
+cd go_world_server
+```
+Le succès de cette commande dépend du fait que le projet Go_world_server existe sur le serveur d'installation. Si ce n'est pas le cas, tout d'abord clonez-le à l'aide de la commande suivante:
+
+```bash
+git clone https://gitlab.imerir.com/eric.ghoubiguian/go_world_server
+```
+Ensuite, créez l'image Docker de Go_world_server à l'aide de la commande suivante:
+
+```bash
+docker image build -t go_world_server:latest .
+```
+
+__petite précision__: le caractère `.` précisé à la fin de la commande se réfère au répertoire courant.
+
+Une fois cette commande terminée, l'image `go_world_server` est créée avec `go_world_server` comme nom et `latest` comme étiquette.
+
+Pour vérifier, exécutez la commande suivante pour vérifier que l'image `go_world_server` a bien été créée avec succès:
+
+```bash
+docker image ls
+```
+Vous pouvez de plus consulter la liste de toutes les instructions qui ont été exécutées pour créer l'image Docker de Go_world_server:
+
+```bash
+docker image history go_world_server:latest
+```
+Il est maintenant temps de créer le container Docker et de le faire marcher, pour cela exécutez la commande suivante:
+
+```bash
+docker container run -d --name go_world_server -p 80:8080 go_world_server:latest
+```
+__petite précision__: 
+
+Toutes mes félicitations, le container Docker de Go_world_server est créé et marche maintenant.
+Pour s'en rendre compte, listez tous les containers Docker à l'aide de la commande suivante:
+
+```bash
+docker image ls
+```
+
+ou de celle-ci
+
+```bash
+docker image ls -a
+```
+Maintenant qu'il est installé, l'application web fonctionne maintenant.
+
+Pour s'en rendre compte, il vous suffit d'ouvrir votre navigateur web favori puis d'entrer l'URL suivante:
+
+```bash
+<adresse_ip_du_container>:8080
+```
+Pour connaître l'adresse IP du container Docker de l'application web Go_world_server, faites la commande suivante:
+
+```bash
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' go_world_server
+```
+L'adresse IP du container s'affiche ensuite en dessous.
+
+# Installer Go_world_server en production à l'aide de l'image docker pullé
