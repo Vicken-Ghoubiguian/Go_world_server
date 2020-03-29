@@ -117,3 +117,9 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 L'adresse IP du container s'affiche ensuite en dessous.
 
 # Installer Go_world_server en production à l'aide de l'image docker pullé
+
+Il existe une image Docker de Go world server stockée sur Docker Hub [ici](https://hub.docker.com/r/wicken/go_world_server).
+
+__petite précision__: Docker Hub est un service d'hébergement d'images Docker sur le même principe que GitHub pour les projets.
+
+
