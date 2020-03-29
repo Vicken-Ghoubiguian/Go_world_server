@@ -122,4 +122,47 @@ Il existe une image Docker de Go world server stockée sur Docker Hub [ici](http
 
 __petite précision__: Docker Hub est un service d'hébergement d'images Docker sur le même principe que GitHub pour les projets.
 
+Obtenez l'image Docker de l'application web Go world server à l'aide de cette commande:
 
+```bash
+docker pull wicken/go_world_server
+```
+Une fois cette commande terminée, l'image `wicken/go_world_server` est importée avec `wicken/go_world_server` comme nom et `latest` comme étiquette.
+
+Pour vérifier, exécutez la commande suivante pour vérifier que l'image `wicken/go_world_server` a bien été créée avec succès:
+
+```bash
+docker image ls
+```
+Il est maintenant temps de créer le container Docker et de le faire marcher, pour cela exécutez la commande suivante:
+
+```bash
+docker container run -d --name go_world_server -p 80:8080 wicken/go_world_server:latest
+```
+__petite précision__: 
+
+Toutes mes félicitations, le container Docker de Go_world_server est créé et marche maintenant.
+Pour s'en rendre compte, listez tous les containers Docker à l'aide de la commande suivante:
+
+```bash
+docker image ls
+```
+
+ou de celle-ci
+
+```bash
+docker image ls -a
+```
+Maintenant qu'il est installé, l'application web fonctionne maintenant.
+
+Pour s'en rendre compte, il vous suffit d'ouvrir votre navigateur web favori puis d'entrer l'URL suivante:
+
+```bash
+<adresse_ip_du_container>:8080
+```
+Pour connaître l'adresse IP du container Docker de l'application web Go_world_server, faites la commande suivante:
+
+```bash
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' go_world_server
+```
+L'adresse IP du container s'affiche ensuite en dessous.
