@@ -4,6 +4,21 @@ Go_world_server est une application web écrite en Go (aussi appelé Golang), la
 
 Cette application web renvoie l'heure et la date courante pour toutes les timezones passées par l'URL.
 
+## Sommaire
+
+1. [Prérequis](#prerequis)
+
+2. [Installer Go_world_server en développement ou de test sur une machine quelconque](#installation_sur_machine)
+
+3. [Installer Go_world_server en production avec Docker](#installation_avec_docker)
+
+	* [Installer Go_world_server en production à l'aide du fichier Dockerfile](#installation_avec_dockerfile)
+
+	* [Installer Go_world_server en production à l'aide de l'image docker pullé](#installation_avec_pull)
+
+4. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
+
+<a name="#prerequis"></a>
 ## Prérequis
 
 Pour installer Go_world_server, les prérequis suivants doivent être satisfaits pour la machine:
@@ -12,6 +27,7 @@ Pour installer Go_world_server, les prérequis suivants doivent être satisfaits
 
 * Go dans sa version la plus récente.
 
+<a name="#installation_sur_machine"></a>
 ## Installer Go_world_server en développement ou de test sur une machine quelconque
 
 Pour installer Go_world_server en version de développement ou de test, vérifiez bien que les prérequis listés ci-dessus sont remplis.
@@ -43,10 +59,12 @@ go run main.go
 ```
 ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost:8080/">suivant</a>.
 
+<a name="installation_avec_docker"></a>
 ## Installer Go_world_server en production avec Docker
 
 Il existe 2 procédés pour installer Go_world_server avec Docker: **à l'aide du fichier Dockerfile** et **à l'aide de l'image docker pullé**.
 
+<a name="#installation_avec_dockerfile"></a>
 # Installer Go_world_server en production à l'aide du fichier Dockerfile
 
 Un fichier nommé `Dockerfile` existe à la racine du projet.
@@ -116,6 +134,7 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 ```
 L'adresse IP du container s'affiche ensuite en dessous.
 
+<a name="#installation_avec_pull"></a>
 # Installer Go_world_server en production à l'aide de l'image docker pullé
 
 Il existe une image Docker de Go world server stockée sur Docker Hub [ici](https://hub.docker.com/r/wicken/go_world_server).
@@ -167,6 +186,7 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 ```
 L'adresse IP du container s'affiche ensuite en dessous.
 
+<a name="#comment_utiliser"></a>
 ## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
 
 Pour obtenir l'heure et la date courantes pour une ou plusieurs timezones, il faut les renseigner dans l'URL de l'application et ensuite valider tout en remplaçant le `/` par `&`.
