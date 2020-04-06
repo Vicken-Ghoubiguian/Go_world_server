@@ -166,3 +166,23 @@ Pour connaître l'adresse IP du container Docker de l'application web Go_world_s
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' go_world_server
 ```
 L'adresse IP du container s'affiche ensuite en dessous.
+
+## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
+
+Pour obtenir l'heure et la date courantes pour une ou plusieurs timezones, il faut les renseigner dans l'URL de l'application et ensuite valider tout en remplaçant le `/` par `&`.
+
+__Par exemple__: Partons du principe que vous voulez obtenir l'heure et la date courantes de Paris à France et à Shanghai en République populaire de Chine.
+
+Les timezones correspondantes sont `Europe\Paris` et `Asia\Shanghai`, donc celles-ci devront être obligatoirement renseignées dans l'URL sous la forme suivante: `Europe&Paris` et `Asia&Shanghai`.
+
+En effet:
+
+```bash
+http://<adresse_ip_utilisée>:8080/Europe&Paris/Asia&Shanghai
+```
+affichera d'abord l'heure et la date courantes à Paris et ensuite à Shanghai, alors que
+
+```bash
+http://<adresse_ip_utilisée>:8080/Asia&Shanghai/Europe&Paris
+```
+affichera d'abord l'heure et la date courantes à Shanghai et ensuite à Paris.
