@@ -15,11 +15,7 @@ func Writing_log_in_terminal_function(logs_color string, logs_message string) {
 
 func Writing_log_in_log_file_function(logs_message string) {
 
-	f, err := os.OpenFile("log.txt", os.O_APPEND | os.O_CREATE | os.O_WRONLY, 0644)
-
-	if err != nil {
-		fmt.Println(err)
-	}
+	f, _ := os.OpenFile("log.txt", os.O_APPEND | os.O_CREATE | os.O_WRONLY, 0644)
 
 	defer f.Close()
 
