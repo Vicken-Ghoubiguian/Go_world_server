@@ -39,7 +39,11 @@ func Display_template_function(defined_page Page, bruts_timezones_string string,
 
 		logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Red, "An error occured, consult logs file to know more...")
 
+		logs_module.Writing_log_in_log_file_function("An error occured, consult logs file to know more...")
+
 		logs_module.Display_purple_line()
+
+		 logs_module.Writing_log_in_log_file_function("--------------------")
 
 	} else {
 
@@ -47,13 +51,21 @@ func Display_template_function(defined_page Page, bruts_timezones_string string,
 
 			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display welcome page...")
 
-                        logs_module.Display_purple_line()
+			 logs_module.Writing_log_in_log_file_function("Display welcome page...")
+
+                         logs_module.Display_purple_line()
+
+			 logs_module.Writing_log_in_log_file_function("--------------------")
 
 		} else {
 
 			logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Display timezones [" + bruts_timezones_string + "]...")
 
+			logs_module.Writing_log_in_log_file_function("Display timezones [" + bruts_timezones_string + "]...")
+
                         logs_module.Display_purple_line()
+
+			logs_module.Writing_log_in_log_file_function("--------------------")
 
 		}
 	}

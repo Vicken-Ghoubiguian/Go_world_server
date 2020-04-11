@@ -20,6 +20,8 @@ func main() {
 
 	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "\nConnectez-vous à Go world server à l'adresse suivante: http://localhost:8080/...")
 
+	logs_module.Writing_log_in_log_file_function("\nConnectez-vous à Go world server à l'adresse suivante: http://localhost:8080/...")
+
 	logs_module.Display_purple_line()
 
 	logs_module.Writing_log_in_log_file_function("--------------------")
