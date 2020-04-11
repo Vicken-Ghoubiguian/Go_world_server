@@ -23,7 +23,7 @@ func Writing_log_in_log_file_function(logs_message string) {
 
 	defer f.Close()
 
-	iLog := log.New(f, logs_message, log.LstdFlags)
+	iLog := log.New(f, logs_message, 0)
 	iLog.Println(logs_message + "\n")
 
 }
