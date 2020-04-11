@@ -22,6 +22,8 @@ func main() {
 
 	logs_module.Display_purple_line()
 
+	logs_module.Writing_log_in_log_file_function("--------------------")
+
 	http.HandleFunc("/", handlerFunction)
 
 	http.ListenAndServe(":8080", nil)
