@@ -12,7 +12,7 @@ func defined_date_and_time_for_log_function() string {
 
         dt := time.Now()
 
-        return dt.Format("Monday January 2006 15:04:00")
+        return dt.Format("Monday January 2006 15:04:05")
 }
 
 func Writing_log_in_terminal_function(logs_color string, logs_message string) {
