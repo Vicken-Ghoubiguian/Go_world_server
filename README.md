@@ -201,11 +201,11 @@ docker container exec -it go_world_server cat log.txt
 <a name="comment_utiliser"></a>
 ## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
 
-Pour obtenir l'heure et la date courantes pour une ou plusieurs timezones, il faut les renseigner dans l'URL de l'application et ensuite valider tout en remplaçant le `/` par `&`.
+Pour obtenir l'heure et la date courantes pour une ou plusieurs timezones, il faut les renseigner dans l'URL de l'application et ensuite valider tout en remplaçant les `/` composants la timezone par `&`.
 
 __Par exemple__: Partons du principe que vous voulez obtenir l'heure et la date courantes de Paris à France et à Shanghai en République populaire de Chine.
 
-Les timezones correspondantes sont `Europe\Paris` et `Asia\Shanghai`, donc celles-ci devront être obligatoirement renseignées dans l'URL sous la forme suivante: `Europe&Paris` et `Asia&Shanghai`.
+Les timezones correspondantes sont `Europe/Paris` et `Asia/Shanghai`, donc celles-ci devront être obligatoirement renseignées dans l'URL sous la forme suivante: `Europe&Paris` et `Asia&Shanghai`.
 
 En effet:
 
