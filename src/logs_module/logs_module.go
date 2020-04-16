@@ -10,9 +10,11 @@ import (
 
 func defined_date_and_time_for_log_function() string {
 
+	layout_to_format_time := "Monday January 2006 15:04:05"
+
         dt := time.Now()
 
-        return dt.Format("Monday January 2006 15:04:05")
+        return dt.Format(layout_to_format_time)
 }
 
 func Writing_log_in_terminal_function(logs_color string, logs_message string) {
