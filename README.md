@@ -134,6 +134,12 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 ```
 L'adresse IP du container s'affiche ensuite en dessous.
 
+Pour consulter le fichier des logs dans le terminal, tapez la commande suivante:
+
+```bash
+docker container exec -it go_world_server cat log.txt
+```
+
 <a name="installation_avec_pull"></a>
 # Installer Go_world_server en production à l'aide de l'image docker pullé
 
@@ -185,6 +191,12 @@ Pour connaître l'adresse IP du container Docker de l'application web Go_world_s
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' go_world_server
 ```
 L'adresse IP du container s'affiche ensuite en dessous.
+
+Pour consulter le fichier des logs dans le terminal, tapez la commande suivante:
+
+```bash
+docker container exec -it go_world_server cat log.txt
+```
 
 <a name="comment_utiliser"></a>
 ## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
