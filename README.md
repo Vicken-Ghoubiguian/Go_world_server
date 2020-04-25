@@ -18,6 +18,8 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 4. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
 
+5. [Comment obtenir la documentation du projet ?](#comment_documentation)
+
 <a name="prerequis"></a>
 ## Prérequis
 
@@ -218,3 +220,24 @@ affichera d'abord l'heure et la date courantes à Paris et ensuite à Shanghai, 
 http://<adresse_ip_utilisée>:8080/Asia&Shanghai/Europe&Paris
 ```
 affichera d'abord l'heure et la date courantes à Shanghai et ensuite à Paris.
+
+<a name="comment_documentation"></a>
+#Comment obtenir la documentation du projet ?
+
+Après avoir installé le projet Go_world_server comme indiqué [ici](#installation_sur_machine), vérifiez bien que vous êtes bien dans le répertoire du projet.
+
+Si ce n'est pas le cas, tapez la commande suivante:
+
+```bash
+cd $GOPATH
+```
+
+Ensuite pour consulter la documentation du projet exécutez la commande suivante:
+
+```bash
+godoc -http=:<port_choisi>
+```
+
+La balise `<port_choisi>` correspond au numéro de port que vous voulez.
+
+Une fois la commande lancée, ouvrez une page dans votre navigateur web et dirigez vous à l'adresse suivante `http://localhost:<port_choisi>`.
