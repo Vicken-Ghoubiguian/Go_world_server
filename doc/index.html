@@ -1,0 +1,40 @@
+<h1>Go_world_server</h1>
+Go_world_server est une application web écrite en Go (aussi appelé Golang), langage créé par Google en 2009.<br/>
+Cette application web renvoie l'heure et la date courante pour toutes les timezones passées par l'URL.
+
+<h2>Prérequis</h2>
+Pour installer Go_world_server, les prérequis suivants doivent être satisfaits pour la machine:
+<ul>
+	<li>Linux dans sa version la plus récente,</li>
+	<li>Go dans sa version la plus récente.</li>
+</ul>
+
+<h2>Installer Go_world_server en développement ou de test sur une machine quelconque</h2>
+Pour installer Go_world_server en version de développement ou de test, vérifiez bien que les prérequis listés ci-dessus sont remplis.
+Ensuite, clonez le projet Go_world_server à l'aide de cette commande:
+
+<pre>
+	<code>git clone https://gitlab.imerir.com/eric.ghoubiguian/go_world_server</code>
+</pre>
+
+Ensuite, placez-vous dans le répertoire créé par la commande précédente à l'aide ce celle-ci:
+
+<pre>
+	<code>cd go_world_server</code>
+</pre>
+
+Exécutez après cette commande:
+
+<pre>
+	<code>export GOPATH=${PWD}</code>
+</pre>
+
+<b>petite précision:</b> Cette commande permet de modifier la valeur de la variable d'environnement <code>GOPATH</code> qui spécifie la source du projet go.
+
+Félicitations une fois cela fait, vous pouvez maintenant lancer le projet à l'aide de la commande suivante:
+
+<pre>
+	<code>go run main.go</code>
+</pre>
+
+ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost:8080/" rel="nofollow noreferrer noopener" target="_blank">suivant</a>.
