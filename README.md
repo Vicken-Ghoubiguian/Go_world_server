@@ -38,7 +38,7 @@ Ensuite, clonez le projet Go_world_server à l'aide de cette commande:
 git clone https://gitlab.imerir.com/eric.ghoubiguian/go_world_server
 ```
 
-Ensuite, placez-vous dans le répertoire créé par la commande précédente à l'aide ce celle-ci::
+Ensuite, placez-vous dans le répertoire créé par la commande précédente à l'aide ce celle-ci:
 
 ```bash
 cd go_world_server
