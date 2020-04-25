@@ -222,7 +222,7 @@ http://<adresse_ip_utilisée>:8080/Asia&Shanghai/Europe&Paris
 affichera d'abord l'heure et la date courantes à Shanghai et ensuite à Paris.
 
 <a name="comment_documentation"></a>
-#Comment obtenir la documentation du projet ?
+# Comment obtenir la documentation du projet ?
 
 Après avoir installé le projet Go_world_server comme indiqué [ici](#installation_sur_machine), vérifiez bien que vous êtes bien dans le répertoire du projet.
 
