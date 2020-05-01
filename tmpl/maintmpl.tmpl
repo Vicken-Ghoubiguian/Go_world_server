@@ -6,8 +6,13 @@
 		<link rel="stylesheet" href="../styles/stylesheet.css">
 		<link rel="icon" href="../styles/favicon.png" type="image/png">
 		<title>{{.Title}}</title>
+		<script type="text/JavaScript">
+			function timeRefresh(timeoutPeriod) {
+				setTimeout("location.reload();", timeoutPeriod);
+			}
+		</script>
 	</head>
-	<body>
+	<body onLoad="JavaScript:timeRefresh(10000);">
 		{{if .Welcome_indicator}}
 
 			{{template "bodytmpl" .}}
