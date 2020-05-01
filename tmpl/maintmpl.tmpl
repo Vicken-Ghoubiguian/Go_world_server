@@ -6,13 +6,9 @@
 		<link rel="stylesheet" href="../styles/stylesheet.css">
 		<link rel="icon" href="../styles/favicon.png" type="image/png">
 		<title>{{.Title}}</title>
-		<script type="text/JavaScript">
-			function timeRefresh(timeoutPeriod) {
-				setTimeout("location.reload();", timeoutPeriod);
-			}
-		</script>
 	</head>
-	<body onLoad="JavaScript:timeRefresh(10000);">
+	<body onLoad="JavaScript:timeRefresh();">
+
 		{{if .Welcome_indicator}}
 
 			{{template "bodytmpl" .}}
@@ -22,7 +18,17 @@
 			{{template "bodytmpl" .}}
 		
 		{{end}}
+		Tick toute les <input type="number" id="refresh-time" value="10" min="1" max="59"> secondes.
+		<script type="text/JavaScript">
+			console.log(document.getElementById("refresh-time").value);
 
+			function timeRefresh() {
+				var refresh_time = document.getElementById("refresh-time").value;
+				console.log(refresh_time);
+				setTimeout("location.reload();", refresh_time * 1000);
+			}
+
+		</script>
 	</body>
 </html>
 {{end}}
