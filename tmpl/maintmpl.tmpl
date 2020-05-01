@@ -20,8 +20,12 @@
 
 				function timeRefresh() {
 					var refresh_time = document.getElementById("refresh-time").value;
-					console.log(refresh_time);
-					setTimeout("location.reload();", refresh_time * 1000);
+
+					if(refresh_time !== "")
+					{
+						console.log(refresh_time);
+						setTimeout("location.reload();", refresh_time * 1000);
+					}
 				}		
 
 			</script>
