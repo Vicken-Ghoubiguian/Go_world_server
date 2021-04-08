@@ -16,9 +16,11 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 	* [Installer Go_world_server en production à l'aide de l'image docker pullé](#installation_avec_pull)
 
-4. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
+4. [Installer Go_world_server avec Balena](#installation_avec_balena)
 
-5. [Comment exécuter cette application Web uniquement en local ?](#executer_uniquement_en_local)
+5. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
+
+6. [Comment exécuter cette application Web uniquement en local ?](#executer_uniquement_en_local)
 
 	* [Pourquoi exécuter cette application Web uniquement localement ?](#pourquoi_localement_uniquement)
 
@@ -26,9 +28,9 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 	* [Comment faire avec Docker ?](#localement_avec_docker)
 
-6. [Comment obtenir la documentation du projet ?](#comment_documentation)
+7. [Comment obtenir la documentation du projet ?](#comment_documentation)
 
-7. [Conclusion](#conclusion)
+8. [Conclusion](#conclusion)
 
 <a name="prerequis"></a>
 ## Prérequis
@@ -77,7 +79,7 @@ go run main.go
 Il existe 2 procédés pour installer Go_world_server avec Docker: **à l'aide du fichier Dockerfile** et **à l'aide de l'image docker pullé**.
 
 <a name="installation_avec_dockerfile"></a>
-# Installer Go_world_server en production à l'aide du fichier Dockerfile
+#### Installer Go_world_server en production à l'aide du fichier Dockerfile
 
 Un fichier nommé `Dockerfile` existe à la racine du projet.
 
@@ -153,7 +155,7 @@ docker container exec -it go_world_server cat log.txt
 ```
 
 <a name="installation_avec_pull"></a>
-# Installer Go_world_server en production à l'aide de l'image docker pullé
+### Installer Go_world_server en production à l'aide de l'image docker pullé
 
 Il existe une image Docker de Go world server stockée sur Docker Hub [ici](https://hub.docker.com/r/wicken/go_world_server).
 
@@ -209,6 +211,9 @@ Pour consulter le fichier des logs dans le terminal, tapez la commande suivante:
 ```bash
 docker container exec -it go_world_server cat log.txt
 ```
+
+<a name="installation_avec_balena"></a>
+## Installer Go_world_server avec Balena
 
 <a name="comment_utiliser"></a>
 ## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
