@@ -8,13 +8,13 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 1. [Prérequis](#prerequis)
 
-2. [Installer Go_world_server en développement ou de test sur une machine quelconque](#installation_sur_machine)
+2. [Installer Go_world_server à l'aide du code source sur une machine quelconque](#installation_sur_machine)
 
-3. [Installer Go_world_server en production avec Docker](#installation_avec_docker)
+3. [Installer Go_world_server avec Docker](#installation_avec_docker)
 
-	* [Installer Go_world_server en production à l'aide du fichier Dockerfile](#installation_avec_dockerfile)
+	* [Installer Go_world_server à l'aide du fichier Dockerfile](#installation_avec_dockerfile)
 
-	* [Installer Go_world_server en production à l'aide de l'image docker pullé](#installation_avec_pull)
+	* [Installer Go_world_server à l'aide de l'image docker pullé](#installation_avec_pull)
 
 4. [Installer Go_world_server avec Balena](#installation_avec_balena)
 
@@ -42,9 +42,9 @@ Pour installer Go_world_server, les prérequis suivants doivent être satisfaits
 * Go dans sa version la plus récente.
 
 <a name="installation_sur_machine"></a>
-## Installer Go_world_server en développement ou de test sur une machine quelconque
+## Installer Go_world_server à l'aide du code source sur une machine quelconque
 
-Pour installer Go_world_server en version de développement ou de test, vérifiez bien que les prérequis listés ci-dessus sont remplis.
+Pour installer Go_world_server à l'aide du code source, vérifiez bien que les prérequis listés ci-dessus sont remplis.
 
 Ensuite, clonez le projet Go_world_server à l'aide de cette commande:
 
@@ -74,12 +74,12 @@ go run main.go
 ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost:8080/">suivant</a>.
 
 <a name="installation_avec_docker"></a>
-## Installer Go_world_server en production avec Docker
+## Installer Go_world_server avec Docker
 
 Il existe 2 procédés pour installer Go_world_server avec Docker: **à l'aide du fichier Dockerfile** et **à l'aide de l'image docker pullé**.
 
 <a name="installation_avec_dockerfile"></a>
-#### Installer Go_world_server en production à l'aide du fichier Dockerfile
+#### Installer Go_world_server à l'aide du fichier Dockerfile
 
 Un fichier nommé `Dockerfile` existe à la racine du projet.
 
@@ -155,7 +155,7 @@ docker container exec -it go_world_server cat log.txt
 ```
 
 <a name="installation_avec_pull"></a>
-### Installer Go_world_server en production à l'aide de l'image docker pullé
+### Installer Go_world_server à l'aide de l'image docker pullé
 
 Il existe une image Docker de Go world server stockée sur Docker Hub [ici](https://hub.docker.com/r/wicken/go_world_server).
 
