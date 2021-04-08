@@ -20,6 +20,12 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 5. [Comment exécuter cette application Web uniquement en local ?](#executer_uniquement_en_local)
 
+	* [Pourquoi exécuter cette application Web uniquement localement ?](#pourquoi_localement_uniquement)
+
+	* [Comment faire à partir du code source ?](#localement_avec_code_source)
+
+	* [Comment faire avec Docker ?](#localement_avec_docker)
+
 6. [Comment obtenir la documentation du projet ?](#comment_documentation)
 
 7. [Conclusion](#conclusion)
@@ -227,6 +233,15 @@ affichera d'abord l'heure et la date courantes à Shanghai et ensuite à Paris.
 
 <a name="executer_uniquement_en_local"></a>
 ## Comment exécuter cette application Web uniquement en local ?
+
+<a name="pourquoi_localement_uniquement"></a>
+### Pourquoi exécuter cette application Web uniquement localement ?
+
+<a name="localement_avec_code_source"></a>
+### Comment faire à partir du code source ?
+
+<a name="localement_avec_docker"></a>
+### Comment faire avec Docker ?
 
 <a name="comment_documentation"></a>
 ## Comment obtenir la documentation du projet ?
