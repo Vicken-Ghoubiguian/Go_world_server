@@ -20,6 +20,8 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 5. [Comment obtenir la documentation du projet ?](#comment_documentation)
 
+6. [Conclusion](#conclusion)
+
 <a name="prerequis"></a>
 ## Prérequis
 
@@ -241,3 +243,6 @@ godoc -http=:<port_choisi>
 La balise `<port_choisi>` correspond au numéro de port que vous voulez.
 
 Une fois la commande lancée, ouvrez une page dans votre navigateur web et dirigez vous à l'adresse suivante `http://localhost:<port_choisi>`.
+
+<a name="conclusion"></a>
+## Conclusion
