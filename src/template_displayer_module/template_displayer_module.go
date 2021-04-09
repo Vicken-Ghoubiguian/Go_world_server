@@ -23,11 +23,11 @@ func Display_template_function(defined_page Page, bruts_timezones_string string,
 
 	if defined_page.Welcome_indicator {
 
-		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/welcomebodytmpl.tmpl"))
+		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/welcomebodytmpl.tmpl", "tmpl/footertmpl.tmpl"))
 
 	} else {
 
-		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl"))
+		t = template.Must(t.ParseFiles("tmpl/maintmpl.tmpl", "tmpl/bodytmpl.tmpl", "tmpl/footertmpl.tmpl"))
 
 	}
 
