@@ -18,9 +18,9 @@ func main() {
 
 	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
 
-	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Connectez-vous à Go world server à l'adresse suivante: http://localhost:8080/...")
+	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Connectez-vous à Go world server à l'adresse suivante: http://localhost/...")
 
-	logs_module.Writing_log_in_log_file_function("Connectez-vous à Go world server à l'adresse suivante: http://localhost:8080/...")
+	logs_module.Writing_log_in_log_file_function("Connectez-vous à Go world server à l'adresse suivante: http://localhost/...")
 
 	logs_module.Display_purple_line()
 
@@ -28,7 +28,7 @@ func main() {
 
 	http.HandleFunc("/", handlerFunction)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 
 }
 
