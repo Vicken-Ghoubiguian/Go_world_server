@@ -14,7 +14,7 @@ WORKDIR /go_world_server
 ENV GOPATH /go_world_server
 
 #Expose the docker container listening port
-EXPOSE 8080
+EXPOSE 80
 
 #Container instruction as entrypoint: 'go run main.go'
 ENTRYPOINT ["go", "run", "main.go"]

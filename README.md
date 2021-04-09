@@ -71,7 +71,7 @@ Félicitations une fois cela fait, vous pouvez maintenant lancer le projet à l'
 ```bash
 go run main.go
 ```
-ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost:8080/">suivant</a>.
+ça y est, le serveur est fonctionnel. Connectez-vous à l'aide du lien URL <a href="http://localhost/">suivant</a>.
 
 <a name="installation_avec_docker"></a>
 ## Installer Go_world_server avec Docker
@@ -118,7 +118,7 @@ docker image history go_world_server:latest
 Il est maintenant temps de créer le container Docker et de le faire marcher, pour cela exécutez la commande suivante:
 
 ```bash
-docker container run -d --name go_world_server -p 80:8080 go_world_server:latest
+docker container run -d --name go_world_server -p 80:80 go_world_server:latest
 ```
 __petite précision__: 
 
@@ -139,7 +139,7 @@ Maintenant qu'il est installé, l'application web fonctionne maintenant.
 Pour s'en rendre compte, il vous suffit d'ouvrir votre navigateur web favori puis d'entrer l'URL suivante:
 
 ```bash
-<adresse_ip_du_container>:8080
+<adresse_ip_du_container>:80
 ```
 Pour connaître l'adresse IP du container Docker de l'application web Go_world_server, faites la commande suivante:
 
@@ -176,7 +176,7 @@ docker image ls
 Il est maintenant temps de créer le container Docker et de le faire marcher, pour cela exécutez la commande suivante:
 
 ```bash
-docker container run -d --name go_world_server -p 80:8080 wicken/go_world_server:latest
+docker container run -d --name go_world_server -p 80:80 wicken/go_world_server:latest
 ```
 __petite précision__: 
 
@@ -197,7 +197,7 @@ Maintenant qu'il est installé, l'application web fonctionne maintenant.
 Pour s'en rendre compte, il vous suffit d'ouvrir votre navigateur web favori puis d'entrer l'URL suivante:
 
 ```bash
-<adresse_ip_du_container>:8080
+<adresse_ip_du_container>:80
 ```
 Pour connaître l'adresse IP du container Docker de l'application web Go_world_server, faites la commande suivante:
 
@@ -227,12 +227,12 @@ Les timezones correspondantes sont `Europe/Paris` et `Asia/Shanghai`, donc celle
 En effet:
 
 ```bash
-http://<adresse_ip_utilisée>:8080/Europe&Paris/Asia&Shanghai
+http://<adresse_ip_utilisée>:80/Europe&Paris/Asia&Shanghai
 ```
 affichera d'abord l'heure et la date courantes à Paris et ensuite à Shanghai, alors que
 
 ```bash
-http://<adresse_ip_utilisée>:8080/Asia&Shanghai/Europe&Paris
+http://<adresse_ip_utilisée>:80/Asia&Shanghai/Europe&Paris
 ```
 affichera d'abord l'heure et la date courantes à Shanghai et ensuite à Paris.
 
