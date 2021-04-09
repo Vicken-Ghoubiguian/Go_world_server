@@ -10,30 +10,5 @@
 	<body>
 	    {{template "bodytmpl" .}}
 	</body>
-	<!--<body onLoad="JavaScript:timeRefresh();">
-		
-		{{template "bodytmpl" .}}
-
-		{{if not .Welcome_indicator}}
-
-			Tick toute les <input type="number" id="refresh-time" value="5" min="1" max="10"> secondes.
-
-			<script type="text/JavaScript">
-				console.log(document.getElementById("refresh-time").value);
-
-				function timeRefresh() {
-					var refresh_time = document.getElementById("refresh-time").value;
-
-					if(refresh_time !== "")
-					{
-						console.log(refresh_time);
-						setTimeout("location.reload();", refresh_time * 1000);
-					}
-				}		
-
-			</script>
-
-		{{end}}
-	</body>-->
 </html>
 {{end}}
