@@ -16,9 +16,9 @@ func main() {
 
 	signal_handlers_module.Setup_ctrl_z_handler()
 
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
-	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
+	//http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
 
