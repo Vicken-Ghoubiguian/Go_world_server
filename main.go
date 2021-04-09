@@ -16,9 +16,9 @@ func main() {
 
 	signal_handlers_module.Setup_ctrl_z_handler()
 
-	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("styles"))))
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
-	http.Handle("/ergonomics/", http.StripPrefix("/ergonomics/", http.FileServer(http.Dir("ergonomics"))))
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
 
