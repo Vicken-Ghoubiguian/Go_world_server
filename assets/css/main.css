@@ -1,3 +1,30 @@
+footer {
+
+	margin-top: 5px;
+}
+
+.fa-docker {
+
+  color: #0db7ed;
+}
+
+.fa-github {
+
+  color: #000000;
+}
+
+.foot-link {
+
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+          transition: transform 0.8s ease-in-out;
+}
+
+.foot-link:hover {
+
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .matiere_class {
 	color: red;
 }
