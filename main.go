@@ -20,6 +20,8 @@ func main() {
 
 	http.Handle("/ergonomics/", http.StripPrefix("/ergonomics/", http.FileServer(http.Dir("ergonomics"))))
 
+	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
+
 	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Connectez-vous à Go world server à l'adresse suivante: http://localhost/...")
 
 	logs_module.Writing_log_in_log_file_function("Connectez-vous à Go world server à l'adresse suivante: http://localhost/...")
