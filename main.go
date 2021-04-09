@@ -20,7 +20,7 @@ func main() {
 
 	//http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
-	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
+	//http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("images"))))
 
 	logs_module.Writing_log_in_terminal_function(colors_in_terminal_module.Green, "Connectez-vous à Go world server à l'adresse suivante: http://localhost/...")
 
