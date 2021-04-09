@@ -1,6 +1,6 @@
 {{define "bodytmpl"}}
 <h1 class="matiere_class">{{.Main_section_title}}</h1>
-	<div id="tz_displayer_as_accordion">
+	<div id="tz_displayer_as_accordion" data-toggle="tooltip" data-placement="top" title="Pour bientôt...">
 		{{range .Tz_array}}
 			<h3>{{.}}</h3>
 			<div>
