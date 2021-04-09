@@ -3,17 +3,20 @@ footer {
 	margin-top: 7px;
 }
 
+a {
+
+	text-decoration: none;
+}
+
 .fa-docker {
 
   color: #0db7ed;
-  text-decoration: none;
   margin-left: 10px;
 }
 
 .fa-github {
 
   color: #000000;
-  text-decoration: none;
 }
 
 .foot-link {
