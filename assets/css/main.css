@@ -1,16 +1,19 @@
 footer {
 
-	margin-top: 5px;
+	margin-top: 7px;
 }
 
 .fa-docker {
 
   color: #0db7ed;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 .fa-github {
 
   color: #000000;
+  text-decoration: none;
 }
 
 .foot-link {
@@ -26,14 +29,17 @@ footer {
 }
 
 .matiere_class {
+
 	color: red;
 }
 
 .welcome_class {
+
 	color: blue;
 }
 
 input {
+
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
