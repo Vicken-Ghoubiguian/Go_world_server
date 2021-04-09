@@ -9,7 +9,12 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   		<link rel="stylesheet" href="../styles/stylesheet.css">
-		<script type="text/javascript" src="../ergonomics/ergonomics.js"></script>
+		<!--<script type="text/javascript" src="../ergonomics/ergonomics.js"></script>-->
+		<script>
+			$( function() {
+    			$( "#tz_displayer_as_accordion" ).accordion();
+  			});
+		</script>
 	</head>
 	<body>
 	    {{template "bodytmpl" .}}

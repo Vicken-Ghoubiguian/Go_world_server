@@ -1,5 +1,4 @@
 $( function() {
-
-    $(".tz_displayer_as_accordion").accordion();
-
-  });
+	
+	$( "#tz_displayer_as_accordion" ).accordion();
+});
