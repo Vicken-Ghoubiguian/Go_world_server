@@ -18,9 +18,11 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 4. [Installer Go_world_server avec Balena](#installation_avec_balena)
 
-5. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
+5. [Installer Go_world_server avec Heroku](#installation_avec_heroku)
 
-6. [Comment exécuter cette application Web uniquement en local ?](#executer_uniquement_en_local)
+6. [Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?](#comment_utiliser)
+
+7. [Comment exécuter cette application Web uniquement en local ?](#executer_uniquement_en_local)
 
 	* [Pourquoi exécuter cette application Web uniquement localement ?](#pourquoi_localement_uniquement)
 
@@ -28,9 +30,9 @@ Cette application web renvoie l'heure et la date courante pour toutes les timezo
 
 	* [Comment faire avec Docker ?](#localement_avec_docker)
 
-7. [Comment obtenir la documentation du projet ?](#comment_documentation)
+8. [Comment obtenir la documentation du projet ?](#comment_documentation)
 
-8. [Conclusion](#conclusion)
+9. [Conclusion](#conclusion)
 
 <a name="prerequis"></a>
 ## Prérequis
