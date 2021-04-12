@@ -2,6 +2,10 @@ body {
 
 	font-family: cursive;
 	background-image: url("../images/maxresdefault.jpg");
+	height: 100%;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
 #message_up_to_foot {
