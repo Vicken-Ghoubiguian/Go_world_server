@@ -217,6 +217,9 @@ docker container exec -it go_world_server cat log.txt
 <a name="installation_avec_balena"></a>
 ## Installer Go_world_server avec Balena
 
+<a name="installation_avec_heroku"></a>
+## Installer Go_world_server avec Heroku
+
 <a name="comment_utiliser"></a>
 ## Comment obtenir l'heure et la date courante d'une ou de plusieurs timezones ?
 
