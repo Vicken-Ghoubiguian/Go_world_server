@@ -1,5 +1,5 @@
 #Put the golang image as image's base
-FROM golang
+FROM golang:latest
 
 #
 LABEL maintainer="ericghoubiguian@live.fr"
